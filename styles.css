@@ -556,11 +556,13 @@ h3 {
 .workflow__grid-compact {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .workflow__grid-compact .step-card {
-    flex: 1 1 200px; /* flex grow, shrink, basic basis */
+    flex: 1 1 240px;
+    max-width: 280px;
     background-color: var(--color-bg-alt);
     border: 1px solid var(--color-border-light);
     border-radius: 8px;
@@ -568,19 +570,28 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workflow__grid-compact .step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 47, 73, 0.08);
 }
 
 .step-num {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--color-accent);
     opacity: 0.2;
     line-height: 1;
+    margin-bottom: 0.25rem;
 }
 
 .step-card p {
     font-size: 1rem;
     font-weight: 500;
+    color: var(--color-text);
 }
 
 /* =========================================
