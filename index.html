@@ -22,7 +22,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Icons (Switched to fast CSS CDN instead of heavy JS from unpkg) -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
     
     <!-- Custom Styles -->
@@ -44,7 +44,7 @@
         <div class="container header__container">
             <a href="#" class="logo">
                 <span class="logo__line"></span>
-                <span class="logo__text">ГЕО И УПАКОВКА</span>
+                <span class="logo__text" style="font-size: 0.85rem; max-width: 250px;">ГЕОПРОДВИЖЕНИЕ &bull; ИНФОГРАФИКА &bull; БРЕНДИНГ</span>
             </a>
             <nav class="nav">
                 <a href="#services" class="nav__link">Услуги</a>
@@ -53,7 +53,7 @@
                 <a href="#faq" class="nav__link">Вопросы</a>
             </nav>
             <div class="header__actions">
-                <a href="#contact" class="btn btn--primary btn--small">Обсудить проект</a>
+                <a href="#contact" class="btn btn--primary btn--small">Получить консультацию</a>
             </div>
         </div>
     </header>
@@ -72,13 +72,10 @@
                             Помогаем компаниям выглядеть сильнее, понятнее презентовать услуги и получать больше обращений через карты, визуал, инфографику и дизайн.
                         </p>
                         <div class="hero__buttons">
-                            <a href="#contact" class="btn btn--primary">Обсудить проект</a>
-                            <a href="#contact" class="btn btn--outline">Получить консультацию</a>
-                            <a href="#contact" class="btn btn--outline">Заказать аудит</a>
+                            <a href="#contact" class="btn btn--primary" style="font-size: 1.125rem; padding: 1.25rem 3rem;">Получить консультацию</a>
                         </div>
                     </div>
                     <div class="hero__image-wrapper">
-                        <!-- Added fetchpriority for faster hero loading -->
                         <img src="./images/geo_map_ui_1783022173774.png" alt="Пример интерфейса продвижения бизнеса" class="hero__image" fetchpriority="high" decoding="async">
                     </div>
                 </div>
@@ -90,7 +87,8 @@
             <div class="container">
                 <h2 class="section-title">ЗАДАЧИ И БОЛИ,<br>С КОТОРЫМИ МЫ РАБОТАЕМ</h2>
                 
-                <div class="problems__grid-9">
+                <!-- Switched to a tighter grid layout -->
+                <div class="problems__grid-compact">
                     <div class="problem-card">
                         <i class="ph ph-map-pin"></i>
                         <p>Компанию плохо находят в картах и навигаторах</p>
@@ -131,151 +129,158 @@
             </div>
         </section>
 
-        <!-- SERVICES -->
+        <!-- SERVICES (Now using Tabs to save space) -->
         <section class="services section-border-top" id="services">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">НАПРАВЛЕНИЯ</h2>
                 </div>
 
-                <!-- Service 1 -->
-                <div class="service-row">
-                    <div class="service-row__content">
-                        <h3 class="service-row__title">ГЕОПРОДВИЖЕНИЕ</h3>
-                        <p class="service-row__desc">Для бизнеса, которому нужны заявки из популярных карт и навигаторов.</p>
-                        
-                        <div class="service-lists">
-                            <div class="service-list">
-                                <h4>ЧТО РЕШАЕМ:</h4>
-                                <ul>
-                                    <li>Низкая видимость в картах</li>
-                                    <li>Слабое оформление карточки</li>
-                                    <li>Мало отзывов и низкое доверие</li>
-                                    <li>Слабые позиции по услугам и локации</li>
-                                    <li>Недостаток звонков, маршрутов и переходов</li>
-                                </ul>
-                            </div>
-                            <div class="service-list">
-                                <h4>ЧТО ДЕЛАЕМ:</h4>
-                                <ul>
-                                    <li>Анализ карточки и конкурентов</li>
-                                    <li>Оптимизация услуг под поиск</li>
-                                    <li>Оформление карточки</li>
-                                    <li>Работа с отзывами и репутацией</li>
-                                    <li>Публикации, акции, новости</li>
-                                    <li>Аналитика и корректировки</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-row__visual">
-                        <!-- Added lazy loading -->
-                        <img src="./images/geo_map_ui_1783022173774.png" alt="Продвижение в картах" class="service-image" loading="lazy" decoding="async">
-                    </div>
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="tab-geo">Геопродвижение</button>
+                    <button class="tab-btn" data-tab="tab-info">Инфографика и креативы</button>
+                    <button class="tab-btn" data-tab="tab-brand">Визуальный стиль</button>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="service-row">
-                    <div class="service-row__content">
-                        <h3 class="service-row__title">ИНФОГРАФИКА И КРЕАТИВЫ</h3>
-                        <p class="service-row__desc">Для бизнеса, которому нужно понятно и визуально продавать продукт, услугу или предложение.</p>
-                        
-                        <div class="service-lists">
-                            <div class="service-list">
-                                <h4>ЧТО РЕШАЕМ:</h4>
-                                <ul>
-                                    <li>Клиент не понимает преимущества продукта</li>
-                                    <li>Карточка товара выглядит слабее конкурентов</li>
-                                    <li>Реклама не цепляет внимание</li>
-                                    <li>Много информации, но она плохо подана</li>
-                                    <li>Нет визуальной структуры</li>
-                                    <li>Услугу сложно объяснить простыми словами</li>
-                                </ul>
+                <div class="tabs-content">
+                    <!-- Geo Tab -->
+                    <div class="tab-pane active" id="tab-geo">
+                        <div class="service-row">
+                            <div class="service-row__content">
+                                <p class="service-row__desc">Для бизнеса, которому нужны заявки из популярных карт и навигаторов.</p>
+                                <div class="service-lists">
+                                    <div class="service-list">
+                                        <h4>ЧТО РЕШАЕМ:</h4>
+                                        <ul>
+                                            <li>Низкая видимость в картах</li>
+                                            <li>Слабое оформление карточки</li>
+                                            <li>Мало отзывов и низкое доверие</li>
+                                            <li>Слабые позиции по услугам и локации</li>
+                                            <li>Недостаток звонков, маршрутов и переходов</li>
+                                        </ul>
+                                    </div>
+                                    <div class="service-list">
+                                        <h4>ЧТО ДЕЛАЕМ:</h4>
+                                        <ul>
+                                            <li>Анализ карточки и конкурентов</li>
+                                            <li>Оптимизация услуг под поиск</li>
+                                            <li>Оформление карточки</li>
+                                            <li>Работа с отзывами и репутацией</li>
+                                            <li>Публикации, акции, новости</li>
+                                            <li>Аналитика и корректировки</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="service-list">
-                                <h4>ЧТО ДЕЛАЕМ:</h4>
-                                <ul>
-                                    <li>Инфографика для карточек товаров</li>
-                                    <li>Рекламные креативы и баннеры</li>
-                                    <li>Обложки и визуалы для соцсетей</li>
-                                    <li>Макеты для акций</li>
-                                    <li>Презентация преимуществ продукта или услуги</li>
-                                </ul>
+                            <div class="service-row__visual">
+                                <img src="./images/geo_map_ui_1783022173774.png" alt="Продвижение в картах" class="service-image" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
-                    <div class="service-row__visual">
-                        <img src="./images/infographic_ui_1783022181224.png" alt="Разработка инфографики для маркетплейсов и рекламы" class="service-image" loading="lazy" decoding="async">
-                    </div>
-                </div>
 
-                <!-- Service 3 -->
-                <div class="service-row">
-                    <div class="service-row__content">
-                        <h3 class="service-row__title">ВИЗУАЛЬНЫЙ СТИЛЬ И ЛОГОТИПЫ</h3>
-                        <p class="service-row__desc">Для бизнеса, которому нужна узнаваемая и аккуратная визуальная упаковка.</p>
-                        
-                        <div class="service-lists">
-                            <div class="service-list">
-                                <h4>ЧТО РЕШАЕМ:</h4>
-                                <ul>
-                                    <li>Нет логотипа или он выглядит слабо</li>
-                                    <li>Нет единого стиля, бренд не запоминается</li>
-                                    <li>Визуал выглядит непрофессионально</li>
-                                    <li>Разные материалы выглядят несвязно</li>
-                                </ul>
+                    <!-- Info Tab -->
+                    <div class="tab-pane" id="tab-info">
+                        <div class="service-row">
+                            <div class="service-row__content">
+                                <p class="service-row__desc">Для бизнеса, которому нужно понятно и визуально продавать продукт, услугу или предложение.</p>
+                                <div class="service-lists">
+                                    <div class="service-list">
+                                        <h4>ЧТО РЕШАЕМ:</h4>
+                                        <ul>
+                                            <li>Клиент не понимает преимущества продукта</li>
+                                            <li>Карточка товара выглядит слабее конкурентов</li>
+                                            <li>Реклама не цепляет внимание</li>
+                                            <li>Много информации, но она плохо подана</li>
+                                            <li>Нет визуальной структуры</li>
+                                            <li>Услугу сложно объяснить простыми словами</li>
+                                        </ul>
+                                    </div>
+                                    <div class="service-list">
+                                        <h4>ЧТО ДЕЛАЕМ:</h4>
+                                        <ul>
+                                            <li>Инфографика для карточек товаров</li>
+                                            <li>Рекламные креативы и баннеры</li>
+                                            <li>Обложки и визуалы для соцсетей</li>
+                                            <li>Макеты для акций</li>
+                                            <li>Презентация преимуществ продукта или услуги</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="service-list">
-                                <h4>ЧТО ДЕЛАЕМ:</h4>
-                                <ul>
-                                    <li>Разработка и обновление логотипа</li>
-                                    <li>Подбор цветов и шрифтов</li>
-                                    <li>Базовая визуальная система и фирменные элементы</li>
-                                    <li>Адаптация логотипа под соцсети, сайт, печать, упаковку</li>
-                                </ul>
+                            <div class="service-row__visual">
+                                <img src="./images/infographic_ui_1783022181224.png" alt="Разработка инфографики для маркетплейсов и рекламы" class="service-image" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
-                    <div class="service-row__visual">
-                        <img src="./images/branding_ui_1783022190114.png" alt="Создание логотипов и визуальная упаковка бренда" class="service-image" loading="lazy" decoding="async">
+
+                    <!-- Brand Tab -->
+                    <div class="tab-pane" id="tab-brand">
+                        <div class="service-row">
+                            <div class="service-row__content">
+                                <p class="service-row__desc">Для бизнеса, которому нужна узнаваемая и аккуратная визуальная упаковка.</p>
+                                <div class="service-lists">
+                                    <div class="service-list">
+                                        <h4>ЧТО РЕШАЕМ:</h4>
+                                        <ul>
+                                            <li>Нет логотипа или он выглядит слабо</li>
+                                            <li>Нет единого стиля, бренд не запоминается</li>
+                                            <li>Визуал выглядит непрофессионально</li>
+                                            <li>Разные материалы выглядят несвязно</li>
+                                        </ul>
+                                    </div>
+                                    <div class="service-list">
+                                        <h4>ЧТО ДЕЛАЕМ:</h4>
+                                        <ul>
+                                            <li>Разработка и обновление логотипа</li>
+                                            <li>Подбор цветов и шрифтов</li>
+                                            <li>Базовая визуальная система и фирменные элементы</li>
+                                            <li>Адаптация логотипа под соцсети, сайт, печать, упаковку</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-row__visual">
+                                <img src="./images/branding_ui_1783022190114.png" alt="Создание логотипов и визуальная упаковка бренда" class="service-image" loading="lazy" decoding="async">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- WORKFLOW -->
+        <!-- WORKFLOW (Compacted grid) -->
         <section class="workflow section-border-top" id="workflow">
             <div class="container">
                 <h2 class="section-title">КАК МЫ РАБОТАЕМ</h2>
                 
-                <div class="workflow__grid">
+                <div class="workflow__grid-compact">
                     <div class="step-card">
                         <div class="step-num">01</div>
-                        <p>Разбираем задачу и нишу бизнеса</p>
+                        <p>Разбираем задачу и нишу</p>
                     </div>
                     <div class="step-card">
                         <div class="step-num">02</div>
-                        <p>Анализируем конкурентов в вашей сфере</p>
+                        <p>Анализируем конкурентов</p>
                     </div>
                     <div class="step-card">
                         <div class="step-num">03</div>
-                        <p>Определяем, что мешает заявкам или доверию</p>
+                        <p>Выявляем слабые места</p>
                     </div>
                     <div class="step-card">
                         <div class="step-num">04</div>
-                        <p>Предлагаем оптимальное решение</p>
+                        <p>Предлагаем решение</p>
                     </div>
                     <div class="step-card">
                         <div class="step-num">05</div>
-                        <p>Создаём структуру, визуал или план продвижения</p>
+                        <p>Создаём структуру и визуал</p>
                     </div>
                     <div class="step-card">
                         <div class="step-num">06</div>
-                        <p>Согласовываем и оперативно дорабатываем</p>
+                        <p>Согласовываем</p>
                     </div>
                     <div class="step-card">
                         <div class="step-num">07</div>
-                        <p>Передаём готовые материалы или ведём проект дальше</p>
+                        <p>Передаём результат</p>
                     </div>
                 </div>
             </div>
@@ -289,7 +294,8 @@
                         <h2 class="section-title">ЧТО ПОЛУЧАЕТ КЛИЕНТ</h2>
                     </div>
                     <div class="results__content">
-                        <ul class="check-list">
+                        <!-- Switched to 2 column grid -->
+                        <ul class="check-list check-list--grid">
                             <li><i class="ph ph-check-circle"></i> Понятную упаковку бизнеса и сильную визуальную подачу</li>
                             <li><i class="ph ph-check-circle"></i> Лучшее первое впечатление и больше доверия от клиентов</li>
                             <li><i class="ph ph-check-circle"></i> Понятную презентацию услуг или товаров</li>
@@ -332,25 +338,6 @@
             </div>
         </section>
 
-        <!-- PRICING -->
-        <section class="pricing section-border-top" id="pricing">
-            <div class="container">
-                <div class="pricing__inner">
-                    <h2 class="section-title">СТОИМОСТЬ РАБОТ</h2>
-                    <p class="pricing__text">
-                        Стоимость зависит от задачи, ниши, объёма работ и количества материалов. <br>
-                        После короткого брифа мы подготовим коммерческое предложение по точной стоимости и срокам для вашего проекта.
-                    </p>
-                    <div class="pricing__tags">
-                        <span>Геопродвижение</span>
-                        <span>Инфографика и креативы</span>
-                        <span>Визуальный стиль и логотипы</span>
-                    </div>
-                    <a href="#contact" class="btn btn--primary" style="margin-top: 2rem;">Обсудить стоимость</a>
-                </div>
-            </div>
-        </section>
-
         <!-- FAQ -->
         <section class="faq section-border-top" id="faq">
             <div class="container">
@@ -364,45 +351,21 @@
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-item__question">Можно ли заказать только логотип? <i class="ph ph-caret-down"></i></button>
+                        <button class="faq-item__question">Можно ли заказать только логотип или инфографику? <i class="ph ph-caret-down"></i></button>
                         <div class="faq-item__answer">
-                            <p>Да, вы можете заказать разработку только логотипа. Мы подготовим для вас несколько концепций и доведем выбранный вариант до идеала.</p>
+                            <p>Конечно. Мы разрабатываем логотипы, инфографику для товаров и рекламные макеты как в рамках комплексного ведения, так и разовыми задачами.</p>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-item__question">Можно ли заказать только инфографику? <i class="ph ph-caret-down"></i></button>
+                        <button class="faq-item__question">Можно ли продвигать карточку на картах без рекламы? <i class="ph ph-caret-down"></i></button>
                         <div class="faq-item__answer">
-                            <p>Конечно. Мы разрабатываем инфографику для товаров и рекламные макеты как в рамках комплексного ведения, так и разовыми задачами.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-item__question">Можно ли продвигать карточку без рекламы? <i class="ph ph-caret-down"></i></button>
-                        <div class="faq-item__answer">
-                            <p>Да, качественное оформление под поиск, регулярная публикация новостей, правильная работа с отзывами и фотогалереей могут значительно поднять ваши позиции в картах органически (бесплатно).</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-item__question">Через сколько виден результат по картам? <i class="ph ph-caret-down"></i></button>
-                        <div class="faq-item__answer">
-                            <p>Первые результаты от оптимизации под поиск и обновления карточки 보통 видны уже через 2-3 недели. Для закрепления стабильных позиций в высококонкурентных нишах требуется от 2 месяцев регулярной работы.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-item__question">Что нужно предоставить для старта? <i class="ph ph-caret-down"></i></button>
-                        <div class="faq-item__answer">
-                            <p>Нам потребуется заполнить короткий бриф о вашем бизнесе, предоставить доступы к Яндекс Бизнес/2ГИС (если карточка уже есть) и исходные фото/материалы для дизайна.</p>
+                            <p>Да, качественное оформление под поиск, регулярная публикация новостей и правильная работа с отзывами могут значительно поднять ваши позиции органически (бесплатно).</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-item__question">Сколько правок входит в работу? <i class="ph ph-caret-down"></i></button>
                         <div class="faq-item__answer">
                             <p>Обычно в стоимость заложено до 3 этапов обоснованных правок, чтобы результат полностью соответствовал вашим ожиданиям и решал задачу.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-item__question">В каких форматах передаются файлы? <i class="ph ph-caret-down"></i></button>
-                        <div class="faq-item__answer">
-                            <p>Логотипы и фирменный стиль передаются в векторных и растровых форматах. Инфографика — в форматах, полностью готовых для загрузки на маркетплейсы.</p>
                         </div>
                     </div>
                 </div>
@@ -449,7 +412,7 @@
             <div class="footer__inner">
                 <div class="footer__brand">
                     <span class="logo__line"></span>
-                    <span class="logo__text">ГЕО И УПАКОВКА</span>
+                    <span class="logo__text" style="font-size: 0.85rem;">ГЕОПРОДВИЖЕНИЕ &bull; ИНФОГРАФИКА &bull; БРЕНДИНГ</span>
                 </div>
                 <div class="footer__links">
                     <a href="#services">Геопродвижение</a>
