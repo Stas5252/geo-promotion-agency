@@ -396,35 +396,87 @@ h3 {
     .services { padding-top: 6rem; }
 }
 
-.services-list {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
+.services-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
 @media (min-width: 1024px) {
-    .services-list {
-        gap: 8rem;
+    .services-cards {
+        grid-template-columns: repeat(3, 1fr);
         margin-top: 3rem;
     }
 }
 
-.service-block__title {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    margin-bottom: 1.5rem;
-    color: var(--color-accent);
-    text-transform: uppercase;
-    font-family: var(--font-heading);
+.service-card-modern {
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (min-width: 1024px) {
-    .service-row--reverse .service-row__content {
-        order: 2;
-    }
-    .service-row--reverse .service-row__visual {
-        order: 1;
-    }
+.service-card-modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 47, 73, 0.08);
+    border-color: var(--color-accent);
+}
+
+.service-card-modern__image {
+    width: 100%;
+    height: 240px;
+}
+
+.service-card-modern__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-card-modern__content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-card-modern__content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent);
+}
+
+.service-card-modern__desc {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.service-card-modern__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.service-card-modern__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.service-card-modern__list i {
+    color: var(--color-accent);
+    font-size: 1.25rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
 }
 
 .service-row {
