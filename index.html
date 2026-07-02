@@ -15,11 +15,17 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     
+    <!-- Preconnect to speed up font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Icons (Switched to fast CSS CDN instead of heavy JS from unpkg) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 
     <script type="application/ld+json">
@@ -72,7 +78,8 @@
                         </div>
                     </div>
                     <div class="hero__image-wrapper">
-                        <img src="./images/geo_map_ui_1783022173774.png" alt="Пример интерфейса продвижения бизнеса" class="hero__image">
+                        <!-- Added fetchpriority for faster hero loading -->
+                        <img src="./images/geo_map_ui_1783022173774.png" alt="Пример интерфейса продвижения бизнеса" class="hero__image" fetchpriority="high" decoding="async">
                     </div>
                 </div>
             </div>
@@ -162,7 +169,8 @@
                         </div>
                     </div>
                     <div class="service-row__visual">
-                        <img src="./images/geo_map_ui_1783022173774.png" alt="Продвижение в картах" class="service-image">
+                        <!-- Added lazy loading -->
+                        <img src="./images/geo_map_ui_1783022173774.png" alt="Продвижение в картах" class="service-image" loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -197,7 +205,7 @@
                         </div>
                     </div>
                     <div class="service-row__visual">
-                        <img src="./images/infographic_ui_1783022181224.png" alt="Разработка инфографики для маркетплейсов и рекламы" class="service-image">
+                        <img src="./images/infographic_ui_1783022181224.png" alt="Разработка инфографики для маркетплейсов и рекламы" class="service-image" loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -229,7 +237,7 @@
                         </div>
                     </div>
                     <div class="service-row__visual">
-                        <img src="./images/branding_ui_1783022190114.png" alt="Создание логотипов и визуальная упаковка бренда" class="service-image">
+                        <img src="./images/branding_ui_1783022190114.png" alt="Создание логотипов и визуальная упаковка бренда" class="service-image" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -300,21 +308,21 @@
                 
                 <div class="cases__grid">
                     <div class="case-card">
-                        <img src="./images/geo_map_ui_1783022173774.png" alt="Кейс Геопродвижения">
+                        <img src="./images/geo_map_ui_1783022173774.png" alt="Кейс Геопродвижения" loading="lazy" decoding="async">
                         <div class="case-card__info">
                             <h4>Продвижение в картах</h4>
                             <p>Оформление и рост позиций</p>
                         </div>
                     </div>
                     <div class="case-card">
-                        <img src="./images/infographic_ui_1783022181224.png" alt="Кейс Инфографики">
+                        <img src="./images/infographic_ui_1783022181224.png" alt="Кейс Инфографики" loading="lazy" decoding="async">
                         <div class="case-card__info">
                             <h4>Инфографика товаров</h4>
                             <p>Визуальная подача преимуществ</p>
                         </div>
                     </div>
                     <div class="case-card">
-                        <img src="./images/branding_ui_1783022190114.png" alt="Кейс Брендинга">
+                        <img src="./images/branding_ui_1783022190114.png" alt="Кейс Брендинга" loading="lazy" decoding="async">
                         <div class="case-card__info">
                             <h4>Разработка логотипа</h4>
                             <p>Создание фирменного стиля и оформления</p>
