@@ -720,10 +720,24 @@ h3 {
 }
 
 .benefit-card__icon {
-    font-size: 2.5rem;
-    color: var(--color-accent);
+    font-size: 2rem;
+    color: var(--color-bg);
+    background-color: var(--color-accent);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
     flex-shrink: 0;
     line-height: 1;
+    box-shadow: 0 8px 16px rgba(0, 47, 73, 0.2);
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover .benefit-card__icon {
+    transform: rotate(0deg) scale(1.1);
 }
 
 .benefit-card__text h4 {
@@ -1209,6 +1223,25 @@ h3 {
 
 .floating-btn--chat:hover {
     background-color: #001f33;
+    color: var(--color-bg) !important;
+}
+
+/* WhatsApp and Phone Buttons */
+.floating-btn--wa {
+    background-color: #25D366;
+    color: #ffffff;
+}
+.floating-btn--wa:hover {
+    background-color: #128C7E;
+    color: #ffffff !important;
+}
+
+.floating-btn--phone {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+.floating-btn--phone:hover {
+    background-color: #000000;
     color: var(--color-bg) !important;
 }
 
